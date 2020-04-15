@@ -1,10 +1,8 @@
 ---
-title: "FAQ"
+title: "Pertanyaan yang Sering Diajukan"
 date: 2019-10-17T11:22:16+06:00
 draft: false
-description : "this is a meta description"
+description : "Frequently asked questions about Roa Tante Amy"
 ---
 
-### Frequently Asked Questions
-
-Below FAQ are some common concerns of our clients before purchasing the <br> theme, if you have other questions, please just send it to demo@email.com
+Berikut adalah beberapa kekhawatiran umum dari klien kami sebelum membeli dari Roa Tante Amy, jika Anda memiliki pertanyaan lain, silakan pesan kami menggunakan formulir di bawah ini.

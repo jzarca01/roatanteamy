@@ -1,6 +1,6 @@
 ######################## default configuration ####################
-baseURL = "https://3109d771.ngrok.io/"
-languageCode = "en-us"
+baseURL = "https://www.roatanteamy.com"
+languageCode = "id-ID"
 title = "Roa Tante Amy"
 theme = "hargo"
 summaryLength = "20"
@@ -32,36 +32,38 @@ disqusShortname = ""
 ############################## navigation ###############################
 [menu]
     
-  [[menu.main]]
-  name = "Products"
-  URL = "products"
-  weight = 1
-  
-  [[menu.main]]
-  name = "Blog"
-  URL = "blog"
-  weight = 2
-  
+  #[[menu.main]]
+  #name = "Produk"
+  #URL = "products"
+  #weight = 1
+#  
+#  [[menu.main]]
+#  name = "Blog"
+#  URL = "blog"
+#  weight = 2
+#  
   [[menu.main]]
   name = "FAQ"
   URL = "faq"
   weight = 3
   
+  
   [[menu.main]]
-  name = "Contact"
+  name = "Kontak"
   URL = "contact"
-  weight = 4
-
-  ############# footer menu #############
-  [[menu.footer]]
-  name = "Products"
-  URL = "products"
-  weight = 1
+  weight = 5
   
-  [[menu.footer]]
-  name = "Blog"
-  URL = "blog"
-  weight = 2
+#
+  ############# footer menu #############
+  #[[menu.footer]]
+  #name = "Produk"
+  #URL = "products"
+  #weight = 1
+  
+ # [[menu.footer]]
+ # name = "Blog"
+ # URL = "blog"
+ # weight = 2
   
   [[menu.footer]]
   name = "FAQ"
@@ -69,12 +71,12 @@ disqusShortname = ""
   weight = 3
   
   [[menu.footer]]
-  name = "Terms & Conditions"
+  name = "Syarat & Ketentuan"
   URL = "terms-conditions"
   weight = 4
   
   [[menu.footer]]
-  name = "Contact"
+  name = "Kontak"
   URL = "contact"
   weight = 5
 
@@ -82,20 +84,19 @@ disqusShortname = ""
 #################### default parameters ################################
 [params]
 logo = "images/logo.png"
-home = "Home"
+# home = "Home"
 # Meta data
-description = "This is meta description"
-author = "Themefisher"
+description = "Roa Tante Amy ada club loh, namanya “Bikin Makan Nikmat Club”. Bergabunglah dengan kami dan rasakan perbedaannya!"
 # google map
-gmapAPI = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"
-mapLatitude = "51.5223477"
-mapLongitude = "-0.1622023"
+gmapAPI = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAp_yVyGureu_h6Lo8FsQNFpk8T6SA9mXM&libraries=places"
+mapLatitude = "-6.2404576"
+mapLongitude = "106.6862706"
 mapMarker = "images/marker.png"
 # Google Analitycs
-googleAnalitycsID = "" # Your ID
+googleAnalitycsID = "UA-163736966-1" # Your ID
 # Contact Information
 mobile = "0812 1006 6533"
-email = "roatanteamy@gmail.com"
+email = "hello@roatanteamy.com"
 location = "Jakarta, Indonesia"
 # copyright
 copyright = "Copyright &copy; 2017 Roa Tante Amy | All Rights Reserved"
@@ -105,12 +106,9 @@ copyright = "Copyright &copy; 2017 Roa Tante Amy | All Rights Reserved"
   enable = true
   preloader = "" # use .png , .svg or .gif format
 
-  # Product Rating
-  # it works with https://rating-widget.com/ , you will get the ID and publicKey after creating your account there.
-  [params.rating]
-  enable = true
-  websiteID = "444334"
-  publicKey = "811cf0927332bf51f2e12f84608594ac"
+  # shoppingCart
+  [params.shoppingCart]
+  enable = false
 
   # Social Site
   [[params.social]]
@@ -118,8 +116,8 @@ copyright = "Copyright &copy; 2017 Roa Tante Amy | All Rights Reserved"
   link = "https://www.facebook.com/roatanteamy/"
   
   [[params.social]]
-  icon = "ti-youtube"
-  link = "#"
+  icon = "ti-mobile"
+  link = "whatsapp://send/?phone=%206281210066533"
   
   [[params.social]]
   icon = "ti-instagram"
@@ -127,4 +125,4 @@ copyright = "Copyright &copy; 2017 Roa Tante Amy | All Rights Reserved"
 
   # Contact Form
   [params.contact]
-  formAction = "#" # contact form works with formspree.io
+  formAction = "https://formspree.io/xyydoygd" # contact form works with formspree.io

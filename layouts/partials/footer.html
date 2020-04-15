@@ -6,7 +6,7 @@
             alt="{{ .Site.Title }}"></a>
       </div>
       <div class="col-md-3 col-sm-6">
-        <h5 class="font-weight-medium mb-4">Important Links</h5>
+        <h5 class="font-weight-medium mb-4">Tautan Penting</h5>
         <ul class="list-unstyled">
           {{ range .Site.Menus.footer }}
           <li class="mb-3"><a class="text-color" href="{{ .URL | absURL }}">{{ .Name }}</a></li>
@@ -14,7 +14,7 @@
         </ul>
       </div>
       <div class="col-md-4 col-sm-6">
-        <h5 class="font-weight-medium mb-4">Connect With Us</h5>
+        <h5 class="font-weight-medium mb-4">Terhubung dengan kami</h5>
         <ul class="list-unstyled mb-5">
           <li class="mb-3"><a class="text-color" href="tel:{{ .Site.Params.mobile }}"><i
                 class="ti-mobile text-primary mr-2"></i>
@@ -32,12 +32,12 @@
         </ul>
       </div>
       <div class="col-lg-4 col-md-5">
-        <h5 class="font-weight-medium mb-4">Contact us</h5>
+        <h5 class="font-weight-medium mb-4">Hubungi kami</h5>
         <form action="{{ .Site.Params.contact.formAction }}" method="POST">
-          <input type="text" class="form-control mb-2" id="name" name="name" placeholder="Your Name">
-          <input type="email" class="form-control mb-2" id="email" name="email" placeholder="Your Email">
-          <textarea name="message" id="message" class="form-control mb-2" placeholder="Your Message"></textarea>
-          <button type="submit" value="send" class="btn btn-block btn-outline-primary rounded">Send Now</button>
+          <input type="text" class="form-control mb-2" id="name" name="name" placeholder="Nama">
+          <input type="email" class="form-control mb-2" id="email" name="email" placeholder="Email">
+          <textarea name="message" id="message" class="form-control mb-2" placeholder="Pesan"></textarea>
+          <button type="submit" value="send" class="btn btn-block btn-outline-primary rounded">Kirim</button>
         </form>
       </div>
     </div>
@@ -56,14 +56,30 @@
 <script src="{{ .link | absURL }}"></script>
 {{ end }}
 
+<script type="text/javascript">
+  $('a[href^="#"]').on('click', function(event) {
+    var target = $(this.getAttribute('href'));
+    if( target.length ) {
+      event.preventDefault();
+      $('html, body').stop().animate({
+          scrollTop: target.offset().top
+      }, 1000);
+      location.hash = '';
+    }
+  });
+  $(window).bind('hashchange',function(event){
+    var hash = location.hash.replace('#','');
+  });
+</script>
+
 <!-- snipcart -->
-<script type="text/javascript" id="snipcart" src="https://cdn.snipcart.com/scripts/2.0/snipcart.js"
+<!-- <script type="text/javascript" id="snipcart" src="https://cdn.snipcart.com/scripts/2.0/snipcart.js"
   data-api-key="M2E5YjA3NjMtYzRiYS00YzVjLWEyYWYtNDY5ZDI0OWZhYjg5"></script>
 <script>
   Snipcart.execute('registerLocale', 'en', {
     powered_by: "Themefisher"
   });
-</script>
+</script> -->
 
 {{ "<!-- Main Script -->" | safeHTML }}
 {{ $script := resources.Get "js/script.js" | minify}}
@@ -86,45 +102,5 @@
   })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
   ga('create', '{{ . }}', 'auto');
   ga('send', 'pageview');
-</script>
-{{ end }}
-
-<!-- product rating -->
-{{ if .Site.Params.rating.enable }}
-<script type="text/javascript">
-  (function (d, t, e, m) {
-
-    // Async Rating-Widget initialization.
-    window.RW_Async_Init = function () {
-
-      RW.init({
-        huid: "{{ .Site.Params.rating.websiteID }}",
-        uid: "{{ .Site.Params.rating.publicKey }}",
-        source: "website",
-        options: {
-          "size": "medium",
-          "style": "oxygen",
-          "isDummy": false
-        }
-      });
-      RW.render();
-    };
-    // Append Rating-Widget JavaScript library.
-    var rw, s = d.getElementsByTagName(e)[0],
-      id = "rw-js",
-      l = d.location,
-      ck = "Y" + t.getFullYear() +
-      "M" + t.getMonth() + "D" + t.getDate(),
-      p = l.protocol,
-      f = ((l.search.indexOf("DBG=") > -1) ? "" : ".min"),
-      a = ("https:" == p ? "secure." + m + "js/" : "js." + m);
-    if (d.getElementById(id)) return;
-    rw = d.createElement(e);
-    rw.id = id;
-    rw.async = true;
-    rw.type = "text/javascript";
-    rw.src = p + "//" + a + "external" + f + ".js?ck=" + ck;
-    s.parentNode.insertBefore(rw, s);
-  }(document, new Date(), "script", "rating-widget.com/"));
 </script>
 {{ end }}

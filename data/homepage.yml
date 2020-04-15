@@ -2,27 +2,30 @@
 banner:
   enable : true
   title : "Bikin Makan Nikmat Club"
-  content : "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed dia"
+  content : "Mencoba Sambal Ikan Roa Tante Amy dengan berbagai macam menu masakan, pemilihan ingredients yang sempurna maka terciptalah Sambal Ikan Roa Tante Amy yang cocok dengan lidah pecinta sambal."
   image : "images/banner.png"
   # button
   button:
     enable : true
-    label : "All Products"
+    label : "Temukan semua produk"
     link : "products"
   # demo video
   video:
-    enable : true
+    enable : false
     videoURL : "https://www.youtube.com/embed/wf4F2-9UXUo"
+    
 
 ########################## About ##############################
 about:
-  enable : true
-  title : "About Our Product"
-  content : "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-          clita kasd gubergren,"
-  image : "images/about.png"
+  enable: true
+  title: "Tentang Tante Amy"
+  aboutList: 
+    - listItem: "Saat Tante Amy berwisata ke Manado, Sulawesi Utara dan disana Tante Amy jatuh cinta dengan hidangan pisang goreng cocol sambal roa. Rasanya itu manis, pedas, asin dan gurih semua menjadi satu."
+    - listItem: "Lalu setelah berpulang ke Jakarta Tante Amy mencoba membuat sendiri sambal roa dan tak di sangka-sangka keluarga dan teman-teman suka. <br/>Dari situ lah muncul ide, kenapa tidak di buat bisnis saja?"
+    - listItem: "Melewati masa trial and error, mencoba sambal roa dengan berbagai macam menu masakan, pemilihan ingredients yang sempurna maka terciptalah Sambal Ikan Roa Tante Amy yang cocok dengan lidah pecinta sambal."
+    - listItem: "Pedas, nikmat dan cocok di santap dengan menu masakan apa saja."
+  aboutAction: "Selamat mencoba!"
+  image: "images/about.png"
 
 
 ###################### Call to action ########################
@@ -36,52 +39,53 @@ cta:
     label : "All Products"
     link : "products"
 
+
 ######################## raw material #######################
 material:
   enable : true
-  title : "Ingredients Of Our Products"
-  subtitle : "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dol."
+  title : "Bahan dalam produk kami"
+  subtitle : "Kami dengan cermat memilih produk untuk rasa mereka untuk menawarkan pelanggan kami produk-produk berkualitas tinggi dan bahan-bahan terbaik."
   materialItem:
     # material item loop
-    - title : "Matcha Seeds"
+    - title : "Cabai Rawit"
       image : "images/material/material-1.png"
-      content : "Lorem ipsum dolor sit amet,be consetetur sadipscing elitr, sed diam nonumy eirmod tem"
+      content : "Untuk memberi rasa pedas"
       
     # material item loop
-    - title : "Aloe Vera"
+    - title : "Cabai Merah"
       image : "images/material/material-2.png"
-      content : "Lorem ipsum dolor sit amet,be consetetur sadipscing elitr, sed diam nonumy eirmod tem"
+      content : "Untuk memberi rasa pedas dan memberi warna merah pada sambal"
       
     # material item loop
-    - title : "Turmeric"
+    - title : "Bawang Merah"
       image : "images/material/material-3.png"
-      content : "Lorem ipsum dolor sit amet,be consetetur sadipscing elitr, sed diam nonumy eirmod tem"
+      content : "Untuk menonjolkan rasa masakan dan memberikan rasa gurih terutama untuk masakan pedas"
       
     # material item loop
-    - title : "Tulshi leaf"
+    - title : "Jahe"
       image : "images/material/material-4.png"
-      content : "Lorem ipsum dolor sit amet,be consetetur sadipscing elitr, sed diam nonumy eirmod tem"
+      content : "Untuk penyedap masakan untuk membangkitkan selera makan"
+
 
 ########################### Advantage #########################
 advantage:
   enable : true
-  title : "Advantages Of Using <br> Our Product"
-  subtitle : "Lorem ipsum dolor sit amet, da decal consetetur<br> sadipscing elitr, sed diam nonumya eirmod"
+  title : "Keuntungan Menggunakan Produk Kami"
+  subtitle : "Sambal Ikan Roa Tante Amy sebagai pelengkap kelezatan menu makanan anda."
   image : "images/advantage.png"
   advantageList:
     # advantage list loop
-    - listItem : "Extremely lightweight"
-    - listItem : "Excellent breathability"
-    - listItem : "Can increase Cell activation"
-    - listItem : "Glowing Skin In 7 Days"
-    - listItem : "Increasing Glow Of Face"
-    - listItem : "More Beautiful Face Skin"
+    - listItem : "Terbuat dari bahan bahan pilihan segar"
+    - listItem : "Sambal roa yang tahan lama"
+    - listItem : "Dibuat tanpa bahan pengawet"
+    - listItem : "Pelengkap menu makanan lezat Anda"
+  resellerText: "Sambal Ikan Roa Tante Amy juga membuka sistem reseller dan dropship bagi Anda yang ingin memulai bisnis tapi belum mempunyai produk sendiri. Kami menyediakan harga khusus bagi reseller dengan minimum pembelian yang rendah."
+  resellerAction: "Hubungi kami untuk mengetahui harga reseller."
 
 
 ######################## Promo Video ##########################
 video:
-  enable : true
+  enable : false
   title : "How To Use This Product?"
   content : "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
           dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et."
@@ -91,14 +95,14 @@ video:
 
 ######################## Products #############################
 products:
-  enable : false
-  title : "Products List"
+  enable : true
+  title : "Beberapa tingkat kepedasan"
   # product item comes from "content/products"
 
 
 ########################## Testimonial ########################
 testimonial:
-  enable : true
+  enable : false
   title : "What People Are Saying <br> About Our Product"
   testimonialItem:
     # testimonial item loop

@@ -1,5 +1,8 @@
 {{ define "main" }}
 
+{{ partial "whatsapp.html" . }}
+
+
 <!-- banner -->
 {{ if .Site.Data.homepage.banner.enable }}
 {{ with .Site.Data.homepage.banner }}
@@ -11,7 +14,7 @@
         <p>{{ .content | markdownify }}</p>
         {{ if .button.enable }}
         {{ with .button }}
-        <a href="{{ .link }}" class="btn btn-primary mr-3">{{ .label }}</a>
+        <a class="btn btn-primary mr-3" href="#products">{{ .label }}</a>
         {{ end }}
         {{ end }}
 
@@ -53,7 +56,10 @@
       </div>
       <div class="col-md-6 col-lg-5">
         <h2>{{ .title | markdownify }}</h2>
-        <p>{{ .content | markdownify }}</p>
+        {{ range .aboutList }}
+          <p>{{ .listItem | markdownify }}</p>
+        {{ end }}
+        <p>{{ .aboutAction | markdownify }}</p>
       </div>
     </div>
   </div>
@@ -110,6 +116,8 @@
           <li class="mb-3"><i class="ti-arrow-circle-right text-primary mr-2"></i>{{ .listItem }}</li>
           {{ end }}
         </ul>
+        <p class="mb-4">{{ .resellerText | markdownify }}</p>
+        <p class="mb-4">{{ .resellerAction | markdownify }}</p>
       </div>
       <div class="col-md-6">
         <img src="{{ .image | absURL}}" class="img-fluid" alt="">
@@ -157,7 +165,7 @@
 
 <!-- products -->
 {{ if .Site.Data.homepage.products.enable }}
-<section class="section pb-0">
+<section class="section pb-0" id="products">
   <div class="container">
     <div class="row">
       <div class="col-12 text-center mb-4">
@@ -168,23 +176,21 @@
       {{ range first 6 (where .Site.RegularPages "Type" "products") }}
       <div class="col-lg-4 col-sm-6 mb-4">
         <div class="card border-0 text-center">
-          <a href="{{ .Permalink }}">
             {{ range first 1 .Params.Images }}
             <img src="{{ .image | absURL }}" alt="{{ .Title }}" class="card-img-top">
             {{ end }}
-          </a>
           <div class="card-body">
-            <a href="{{ .Permalink }}" class="h4">{{ .Title }}</a>
+            <p class="h4">{{ .Title }}</p>
             <p>{{ .Params.Description }}</p>
             <div class="mb-4">
               <span class="lead text-primary">{{ .Params.Price }}</span>
               <s>{{ .Params.PriceBefore }}</s>
             </div>
-            <button class="snipcart-add-item btn btn-sm btn-outline-primary" data-item-id="{{ .Params.ProductID }}"
+            <!--<button class="snipcart-add-item btn btn-sm btn-outline-primary" data-item-id="{{ .Params.ProductID }}"
               data-item-name="{{ .Title }}" {{ range first 1 .Params.Images }} data-item-image="{{ .image | absURL }}"
               {{ end }} data-item-price="{{ .Params.Price }}" data-item-url="{{ .Permalink }}">
               Add to cart
-            </button>
+            </button>-->
           </div>
         </div>
       </div>

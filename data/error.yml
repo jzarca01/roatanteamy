@@ -1,0 +1,11 @@
+############################ banner ##########################
+banner:
+  enable : true
+  title : "Tidak ada sambal di sini"
+  content : "Maaf, kami tidak menemukan halaman yang anda cari."
+  image : "images/404.jpg"
+  # button
+  button:
+    enable : true
+    label : "Bawa saya kembali"
+    link : "/"

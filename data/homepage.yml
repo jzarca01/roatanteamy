@@ -47,14 +47,19 @@ material:
   subtitle : "Kami dengan cermat memilih produk untuk rasa mereka untuk menawarkan pelanggan kami produk-produk berkualitas tinggi dan bahan-bahan terbaik."
   materialItem:
     # material item loop
-    - title : "Cabai Rawit"
+    - title : "Ikan Roa"
+      image : "images/material/material-0.png"
+      content : "Ikan Roa adalah ingredient utama. Rasa asap dan gurih nya ikan roa memberikan kelezatan yang unik pada Sambal Ikan Roa Tante Amy."
+
+    # material item loop
+    - title : "Cabai"
       image : "images/material/material-1.png"
-      content : "Untuk memberi rasa pedas"
+      content : "Untuk memberi rasa pedas dan memberi warna merah pada sambal"
       
     # material item loop
-    - title : "Cabai Merah"
-      image : "images/material/material-2.png"
-      content : "Untuk memberi rasa pedas dan memberi warna merah pada sambal"
+    #- title : "Cabai Merah"
+    #  image : "images/material/material-2.png"
+    #  content : "Untuk memberi rasa pedas dan memberi warna merah pada sambal"
       
     # material item loop
     - title : "Bawang Merah"

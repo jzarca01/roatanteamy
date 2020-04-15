@@ -14,5 +14,3 @@ AddOutputFilterByType DEFLATE image/gif
 AddOutputFilterByType DEFLATE image/jpeg
 AddOutputFilterByType DEFLATE image/svg+xml
 </IfModule>
-
-ErrorDocument 404 /404.html
